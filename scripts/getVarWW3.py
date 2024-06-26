@@ -1,5 +1,6 @@
 #----fhis program extracts the points from WW3 corresponding 
 #----to the NDBC buoy stations 
+#%%
 import os,sys
 import json
 import glob
@@ -36,12 +37,14 @@ with open('./pointsNDBC.info', 'r') as file:
      points = json.load(file)
 
 #----fpath for ww3 files
-arqin='/Users/jtakeo/googleDrive/myProjects/cmcc/ww3GlobalUnst/buoys/ndbc/ww3/ww3.*.nc'
+arqin='/Users/jtakeo/googleDrive/myProjects/myBuoyTools/ndbc/data/ww3/ww3.*.nc'
 #----fpath for the ww3 extracted points
-arqout='/Users/jtakeo/googleDrive/myProjects/cmcc/ww3GlobalUnst/buoys/ndbc/ww3/points'
+arqout='/Users/jtakeo/googleDrive/myProjects/myBuoyTools/ndbc/data/ww3/points/'
 
 for name, info in points.items():
     pto = f"{name}"; x = points[f"{name}"]['x']; y = points[f"{name}"]['y']
     print("Doing buoy id: ",pto)
     fileout=f'ww3_{pto}'   
     buoy_extraction(arqin,x,y,os.path.join(arqout, fileout),variable)
+
+# %%
