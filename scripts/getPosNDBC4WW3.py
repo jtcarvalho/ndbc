@@ -44,8 +44,9 @@ for key, value in points.items():
     print(f'    "{key}": {{"x": {value["x"]}, "y": {value["y"]}, "area": \'{value["area"]}\' }},')
 print("}")
 
-#with open('./pointsNDBC.info', 'w') as file:
-with open('./kk.info', 'w') as file:
+with open('./pointsNDBC.info', 'w') as file:
     json.dump(points, file, indent=4)
+
+
 
 # %%

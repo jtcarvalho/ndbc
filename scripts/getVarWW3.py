@@ -47,4 +47,5 @@ for name, info in points.items():
     fileout=f'ww3_{pto}'   
     buoy_extraction(arqin,x,y,os.path.join(arqout, fileout),variable)
 
+
 # %%

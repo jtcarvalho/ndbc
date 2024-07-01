@@ -200,4 +200,6 @@ for station_id in stations:
 
 plot_map_nbias(all_longitudes,all_latitudes,n_bias_percent_values)
 plot_map_nrmse(all_longitudes,all_latitudes,n_rmse_percent_values)
+
+
 # %%
